@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useLanguage } from './language-provider'
 import { LanguageToggle } from './language-toggle'
+import { ThemeToggle } from './theme-toggle'
 
 export function Navbar() {
   const { t } = useLanguage()
@@ -32,7 +33,10 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <LanguageToggle />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
         </nav>
       </div>
     </aside>

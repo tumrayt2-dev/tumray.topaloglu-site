@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { LanguageProvider } from './components/language-provider'
+import { ThemeProvider } from './components/theme-provider'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
@@ -41,6 +42,18 @@ export const metadata: Metadata = {
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
+const themeInitScript = `
+(function() {
+  try {
+    var saved = localStorage.getItem('site-theme');
+    var theme = (saved === 'light' || saved === 'dark')
+      ? saved
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`
+
 export default function RootLayout({
   children,
 }: {
@@ -49,22 +62,28 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
+      suppressHydrationWarning
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-neutral-900 bg-white dark:text-neutral-100 dark:bg-neutral-950',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
-        <LanguageProvider>
-          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-            <Navbar />
-            {children}
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </main>
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+              <Navbar />
+              {children}
+              <Footer />
+              <Analytics />
+              <SpeedInsights />
+            </main>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
