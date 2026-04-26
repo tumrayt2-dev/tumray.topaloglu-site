@@ -3,6 +3,7 @@ export type Lang = 'tr' | 'en'
 export type Translation = {
   nav: {
     home: string
+    about: string
     projects: string
     blog: string
     contact: string
@@ -15,6 +16,14 @@ export type Translation = {
   sections: {
     featured: string
     contact: string
+  }
+  about: {
+    title: string
+    paragraphs: string[]
+    projectsHeading: string
+    projects: string[]
+    stack: string
+    webLabel: string
   }
   statusLabels: {
     live: string
@@ -40,6 +49,7 @@ export const translations: Record<Lang, Translation> = {
   tr: {
     nav: {
       home: 'Ana Sayfa',
+      about: 'Hakkımda',
       projects: 'Projeler',
       blog: 'Blog',
       contact: 'İletişim',
@@ -72,10 +82,29 @@ export const translations: Record<Lang, Translation> = {
       githubLabel: 'GitHub',
       linkedinSoon: 'Yakında',
     },
+    about: {
+      title: 'Hakkımda',
+      paragraphs: [
+        'Fırat Üniversitesi Yazılım Mühendisliği mezunuyum. Üniversite yıllarımda C++, C#, HTML, CSS ve SQL Server ile çeşitli projeler geliştirdim. Son sınıfta Turkcell Geleceği Yazanlar .NET Bootcamp\'ine katılarak Turkcell\'de staj yapma fırsatı yakaladım.',
+        'Stajımın ardından Turkcell Grubu şirketlerinden Atmosware\'de Developer olarak göreve başladım ve Şubat 2025\'e kadar bu pozisyonda çalıştım.',
+        'Şubat 2025\'ten itibaren Garaj Bilişim çatısı altında bağımsız olarak çalışıyorum. Mobil oyunlar ve web uygulamaları geliştiriyorum; tasarım, geliştirme, yayın ve canlı operasyonlar dahil tüm süreci tek başıma yürütüyorum.',
+      ],
+      projectsHeading: 'Yayında ve test aşamasındaki projeler',
+      projects: [
+        'Trakyaoto Yedek Parça — E-ticaret (yayında)',
+        'Ember Wings — Mobil oyun (kapalı test)',
+        'Taboo Rush — Mobil oyun (kapalı test)',
+        'Emojice — Mobil oyun (erken test)',
+        'Workflow SaaS — Çok kiracılı web platformu (geliştirme)',
+      ],
+      stack: 'Stack: Flutter, Unity, .NET, React, Next.js, PostgreSQL, SQL Server.',
+      webLabel: 'Web',
+    },
   },
   en: {
     nav: {
       home: 'Home',
+      about: 'About',
       projects: 'Projects',
       blog: 'Blog',
       contact: 'Contact',
@@ -107,6 +136,24 @@ export const translations: Record<Lang, Translation> = {
       linkedinLabel: 'LinkedIn',
       githubLabel: 'GitHub',
       linkedinSoon: 'Coming soon',
+    },
+    about: {
+      title: 'About',
+      paragraphs: [
+        'I\'m a graduate of Fırat University, Software Engineering. During my studies I worked with C++, C#, HTML, CSS and SQL Server. In my senior year I joined the Turkcell Geleceği Yazanlar .NET Bootcamp, which led to an internship at Turkcell.',
+        'After the internship I joined Atmosware (a Turkcell Group company) as a Developer and worked there until February 2025.',
+        'Since February 2025 I\'ve been working independently under the Garaj Bilişim banner, building mobile games and web apps end-to-end — design, development, release and live ops.',
+      ],
+      projectsHeading: 'Live and in-testing projects',
+      projects: [
+        'Trakyaoto Yedek Parça — E-commerce (live)',
+        'Ember Wings — Mobile game (closed test)',
+        'Taboo Rush — Mobile game (closed test)',
+        'Emojice — Mobile game (early test)',
+        'Workflow SaaS — Multi-tenant web platform (in development)',
+      ],
+      stack: 'Stack: Flutter, Unity, .NET, React, Next.js, PostgreSQL, SQL Server.',
+      webLabel: 'Web',
     },
   },
 }
