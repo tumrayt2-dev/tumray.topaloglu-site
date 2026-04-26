@@ -6,21 +6,24 @@ import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
+import { LanguageProvider } from './components/language-provider'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Tumray Topaloğlu — Solo Developer · Garaj Bilişim',
+    template: '%s | Tumray Topaloğlu',
   },
-  description: 'This is my portfolio.',
+  description:
+    'Solo developer building mobile games and web apps. Indie projects under the Garaj Bilişim banner.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Tumray Topaloğlu — Solo Developer',
+    description:
+      'Solo developer building mobile games and web apps. Indie projects under the Garaj Bilişim banner.',
     url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    siteName: 'Tumray Topaloğlu',
+    locale: 'tr_TR',
     type: 'website',
   },
   robots: {
@@ -45,21 +48,23 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="tr"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+      <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
+        <LanguageProvider>
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+            <Navbar />
+            {children}
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </main>
+        </LanguageProvider>
       </body>
     </html>
   )
