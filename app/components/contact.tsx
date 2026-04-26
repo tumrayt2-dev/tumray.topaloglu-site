@@ -4,6 +4,7 @@ import { useLanguage } from './language-provider'
 
 const EMAIL = 'tumray.topaloglu@gmail.com'
 const GITHUB_URL = 'https://github.com/tumrayt2-dev'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/tumraytopaloglu/'
 
 export function Contact() {
   const { t } = useLanguage()
@@ -30,6 +31,19 @@ export function Contact() {
         </li>
         <li>
           <span className="text-neutral-500 dark:text-neutral-400 mr-2">
+            {t.contact.linkedinLabel}:
+          </span>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-neutral-400 dark:decoration-neutral-600 underline-offset-4 hover:text-neutral-900 dark:hover:text-neutral-100"
+          >
+            Tümray Topaloğlu
+          </a>
+        </li>
+        <li>
+          <span className="text-neutral-500 dark:text-neutral-400 mr-2">
             {t.contact.githubLabel}:
           </span>
           <a
@@ -40,14 +54,6 @@ export function Contact() {
           >
             tumrayt2-dev
           </a>
-        </li>
-        <li>
-          <span className="text-neutral-500 dark:text-neutral-400 mr-2">
-            {t.contact.linkedinLabel}:
-          </span>
-          <span className="text-neutral-500 dark:text-neutral-400 italic">
-            {t.contact.linkedinSoon}
-          </span>
         </li>
       </ul>
     </section>
