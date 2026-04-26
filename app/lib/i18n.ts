@@ -43,6 +43,31 @@ export type Translation = {
     githubLabel: string
     linkedinSoon: string
   }
+  privacy: {
+    hubTitle: string
+    hubLead: string
+    backToHub: string
+    appType: string
+    effectiveDate: string
+    publisher: string
+    sections: {
+      intro: string
+      dataCollected: string
+      thirdParties: string
+      childrens: string
+      rights: string
+      changes: string
+      contact: string
+      notes: string
+    }
+    intro: string
+    childrens: string
+    rights: string
+    changes: string
+    contactLine: string
+    footerLink: string
+    notFound: string
+  }
 }
 
 export const translations: Record<Lang, Translation> = {
@@ -100,6 +125,31 @@ export const translations: Record<Lang, Translation> = {
       stack: 'Stack: Flutter, Unity, .NET, React, Next.js, PostgreSQL, SQL Server.',
       webLabel: 'Web',
     },
+    privacy: {
+      hubTitle: 'Gizlilik Politikaları',
+      hubLead: 'Garaj Bilişim çatısı altında yayınlanan ve test aşamasındaki uygulamaların gizlilik politikalarına buradan ulaşabilirsiniz.',
+      backToHub: '← Tüm Politikalar',
+      appType: 'Tür',
+      effectiveDate: 'Yürürlük Tarihi',
+      publisher: 'Yayıncı',
+      sections: {
+        intro: 'Genel',
+        dataCollected: 'Toplanan Veriler',
+        thirdParties: 'Üçüncü Taraf Hizmetler',
+        childrens: 'Çocukların Gizliliği',
+        rights: 'Haklarınız',
+        changes: 'Değişiklikler',
+        contact: 'İletişim',
+        notes: 'Ek Notlar',
+      },
+      intro: 'Bu politika, uygulamanın hangi verileri topladığını, bu verilerin nasıl kullanıldığını ve hangi üçüncü taraf hizmetlerin devreye girdiğini açıklar. Verileriniz reklam ve temel işlevler dışında pazarlama amacıyla satılmaz.',
+      childrens: 'Uygulamamız 13 yaş altındaki kullanıcıları hedef almaz. Yanlışlıkla 13 yaş altı bir kullanıcıdan veri topladığımızı öğrenirsek, bu veriyi en kısa sürede sileriz. Ebeveyn veya vasi olarak böyle bir durumdan haberdarsanız bize ulaşabilirsiniz.',
+      rights: 'KVKK ve GDPR kapsamında verilerinize erişim, düzeltme, silme ve işlemeye itiraz haklarınız bulunmaktadır. Bu hakları kullanmak için aşağıdaki iletişim bilgisinden bize ulaşabilirsiniz.',
+      changes: 'Bu politika zaman zaman güncellenebilir. Önemli değişiklikleri uygulama içinde veya bu sayfada duyuracağız. Yürürlük tarihi her güncellemede yenilenir.',
+      contactLine: 'Sorularınız veya talepleriniz için bize aşağıdaki adresten ulaşabilirsiniz:',
+      footerLink: 'Gizlilik Politikaları',
+      notFound: 'Aradığınız politika bulunamadı.',
+    },
   },
   en: {
     nav: {
@@ -154,6 +204,31 @@ export const translations: Record<Lang, Translation> = {
       ],
       stack: 'Stack: Flutter, Unity, .NET, React, Next.js, PostgreSQL, SQL Server.',
       webLabel: 'Web',
+    },
+    privacy: {
+      hubTitle: 'Privacy Policies',
+      hubLead: 'Privacy policies for apps published or in testing under the Garaj Bilişim banner.',
+      backToHub: '← All Policies',
+      appType: 'Type',
+      effectiveDate: 'Effective Date',
+      publisher: 'Publisher',
+      sections: {
+        intro: 'Overview',
+        dataCollected: 'Data We Collect',
+        thirdParties: 'Third-Party Services',
+        childrens: 'Children\'s Privacy',
+        rights: 'Your Rights',
+        changes: 'Changes',
+        contact: 'Contact',
+        notes: 'Additional Notes',
+      },
+      intro: 'This policy explains what data the app collects, how it\'s used and which third-party services are involved. Your data is not sold for marketing purposes beyond the advertising and core functionality described below.',
+      childrens: 'This app is not directed to users under 13. If we learn we have collected data from a user under 13, we will delete it as soon as possible. Parents or guardians who suspect this can contact us at the address below.',
+      rights: 'Under KVKK (Turkey) and GDPR (EU) you have the right to access, correct, delete and object to the processing of your data. To exercise these rights, contact us using the address below.',
+      changes: 'This policy may be updated from time to time. Significant changes will be announced in-app or on this page. The effective date is updated with every revision.',
+      contactLine: 'For questions or requests, reach us at:',
+      footerLink: 'Privacy Policies',
+      notFound: 'The requested policy could not be found.',
     },
   },
 }
