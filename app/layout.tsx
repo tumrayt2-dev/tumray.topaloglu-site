@@ -13,13 +13,13 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Tumray Topaloğlu — Solo Developer · Garaj Bilişim',
+    default: 'Tumray Topaloğlu — Mobile Game & Web Developer · Garaj Bilişim',
     template: '%s | Tumray Topaloğlu',
   },
   description:
     'Solo developer building mobile games and web apps. Indie projects under the Garaj Bilişim banner.',
   openGraph: {
-    title: 'Tumray Topaloğlu — Solo Developer',
+    title: 'Tumray Topaloğlu — Mobile Game & Web Developer',
     description:
       'Solo developer building mobile games and web apps. Indie projects under the Garaj Bilişim banner.',
     url: baseUrl,

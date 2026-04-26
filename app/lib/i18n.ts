@@ -45,7 +45,7 @@ export const translations: Record<Lang, Translation> = {
       contact: 'İletişim',
     },
     hero: {
-      title: 'Solo Developer — Games & Web',
+      title: 'Mobile Game & Web Developer',
       studio: 'Garaj Bilişim',
       intro:
         'Mobil oyunlar ve web uygulamaları üretiyorum. Aynı anda birden fazla projeyi tasarımdan yayına kadar tek başıma götürüyorum.',
@@ -81,7 +81,7 @@ export const translations: Record<Lang, Translation> = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Solo Developer — Games & Web',
+      title: 'Mobile Game & Web Developer',
       studio: 'Garaj Bilişim',
       intro:
         'I build mobile games and web apps end-to-end. From design to launch, I run multiple projects on my own.',
