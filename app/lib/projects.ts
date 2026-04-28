@@ -1,7 +1,7 @@
 import type { Lang } from './i18n'
 
 export type ProjectStatus = 'live' | 'closedTest' | 'earlyTest' | 'development'
-export type ProjectAction = 'visit' | 'contactForAccess' | 'comingSoon'
+export type ProjectAction = 'visit' | 'playStore' | 'contactForAccess' | 'comingSoon'
 
 export type Project = {
   slug: string
@@ -31,22 +31,24 @@ export const featuredProjects: Project[] = [
     name: 'Ember Wings',
     category: { tr: 'Mobil Oyun', en: 'Mobile Game' },
     description: {
-      tr: '4 farklı biyomda geçen, refleks odaklı bir kuş oyunu. Şu an Play Console kapalı test aşamasında.',
-      en: 'A reflex-based flying game across four biomes. Currently in Play Console closed testing.',
+      tr: '4 farklı biyomda geçen, refleks odaklı bir kuş oyunu. Google Play\'de yayında.',
+      en: 'A reflex-based flying game across four biomes. Now live on Google Play.',
     },
-    status: 'closedTest',
-    action: 'contactForAccess',
+    status: 'live',
+    action: 'playStore',
+    href: 'https://play.google.com/store/apps/details?id=com.tumray.emberwings',
   },
   {
     slug: 'taboo-rush',
     name: 'Taboo Rush',
     category: { tr: 'Mobil Oyun', en: 'Mobile Game' },
     description: {
-      tr: 'Türkçe tabu oyunu. Klasik mod ve penaltı modu ile tur bazlı eğlenceli bir parti deneyimi.',
-      en: 'Turkish taboo game with classic and penalty modes — a turn-based party experience.',
+      tr: 'Türkçe tabu oyunu. Klasik mod ve penaltı modu ile tur bazlı eğlenceli bir parti deneyimi. Google Play\'de yayında.',
+      en: 'Turkish taboo game with classic and penalty modes — a turn-based party experience. Now live on Google Play.',
     },
-    status: 'closedTest',
-    action: 'contactForAccess',
+    status: 'live',
+    action: 'playStore',
+    href: 'https://play.google.com/store/apps/details?id=com.tumray.taboo_rush',
   },
   {
     slug: 'emojice',

@@ -33,6 +33,7 @@ export type Translation = {
   }
   projectActions: {
     visit: string
+    playStore: string
     contactForAccess: string
     comingSoon: string
   }
@@ -97,6 +98,7 @@ export const translations: Record<Lang, Translation> = {
     },
     projectActions: {
       visit: 'Siteyi Aç',
+      playStore: 'Play Store\'da Aç',
       contactForAccess: 'Erişim için iletişime geç',
       comingSoon: 'Yakında',
     },
@@ -117,8 +119,8 @@ export const translations: Record<Lang, Translation> = {
       projectsHeading: 'Yayında ve test aşamasındaki projeler',
       projects: [
         'Trakyaoto Yedek Parça — E-ticaret (yayında)',
-        'Ember Wings — Mobil oyun (kapalı test)',
-        'Taboo Rush — Mobil oyun (kapalı test)',
+        'Ember Wings — Mobil oyun (Play Store\'da yayında)',
+        'Taboo Rush — Mobil oyun (Play Store\'da yayında)',
         'Emojice — Mobil oyun (erken test)',
         'Workflow SaaS — Çok kiracılı web platformu (geliştirme)',
       ],
@@ -177,6 +179,7 @@ export const translations: Record<Lang, Translation> = {
     },
     projectActions: {
       visit: 'Open Site',
+      playStore: 'Open in Play Store',
       contactForAccess: 'Contact for access',
       comingSoon: 'Coming soon',
     },
@@ -197,8 +200,8 @@ export const translations: Record<Lang, Translation> = {
       projectsHeading: 'Live and in-testing projects',
       projects: [
         'Trakyaoto Yedek Parça — E-commerce (live)',
-        'Ember Wings — Mobile game (closed test)',
-        'Taboo Rush — Mobile game (closed test)',
+        'Ember Wings — Mobile game (live on Play Store)',
+        'Taboo Rush — Mobile game (live on Play Store)',
         'Emojice — Mobile game (early test)',
         'Workflow SaaS — Multi-tenant web platform (in development)',
       ],

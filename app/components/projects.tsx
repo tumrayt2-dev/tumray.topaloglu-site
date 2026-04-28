@@ -41,7 +41,9 @@ function ProjectCard({ project }: { project: Project }) {
   const statusLabel = t.statusLabels[project.status]
   const actionLabel = t.projectActions[project.action]
 
-  const isExternalLink = project.action === 'visit' && project.href
+  const isExternalLink =
+    (project.action === 'visit' || project.action === 'playStore') &&
+    project.href
   const isContact = project.action === 'contactForAccess'
 
   const content = (
