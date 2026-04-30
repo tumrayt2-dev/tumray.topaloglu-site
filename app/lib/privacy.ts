@@ -267,10 +267,7 @@ export const privacyApps: PrivacyApp[] = [
     slug: 'bulmaca_ustasi',
     name: 'Bulmaca Ustası',
     type: { tr: 'Mobil Bulmaca (Android)', en: 'Mobile Puzzle (Android)' },
-    effectiveDate: {
-      tr: 'Geliştirme aşamasında',
-      en: 'In development',
-    },
+    effectiveDate: '2026-04-30',
     contactEmail: COMMON_EMAIL,
     publisher: PUBLISHER,
     intro: {
@@ -279,15 +276,13 @@ export const privacyApps: PrivacyApp[] = [
     },
     locallyStored: {
       tr: [
-        'Tamamlanan bulmacalar ve elde edilen skorlar',
-        'Ayarlar (ses, tema, dil, ipucu sayısı)',
-        'İstatistikler (toplam çözülen bulmaca sayısı vb.)',
+        'Oyun ilerlemesi, en iyi süreler, skor ve seriler (atasözü en iyi serisi, nonogram tamamlanan şablonlar vb.)',
+        'Uygulama ayarları (tema, ses, yazı boyutu, hata gösterimi, dil, ipucu sayısı, geliştirici modu vb.)',
         'Günlük meydan ilerlemesi',
       ],
       en: [
-        'Completed puzzles and scores',
-        'Settings (sound, theme, language, hint count)',
-        'Statistics (total puzzles solved, etc.)',
+        'Game progress, best times, scores and streaks (e.g. proverb best streak, completed nonogram templates)',
+        'App settings (theme, sound, font size, error display, language, hint count, developer mode, etc.)',
         'Daily challenge progress',
       ],
     },
@@ -295,8 +290,8 @@ export const privacyApps: PrivacyApp[] = [
       {
         name: 'Google AdMob',
         body: {
-          tr: 'Banner, geçiş (interstitial) ve ödüllü reklamlar AdMob aracılığıyla sunulur. AdMob, reklam kişiselleştirmesi için Android Reklam Kimliği (AAID), cihaz modeli, işletim sistemi sürümü ve kaba konum (ülke düzeyi) bilgilerini kullanabilir. Daha fazlası: policies.google.com/privacy.',
-          en: 'Banner, interstitial and rewarded ads are served via AdMob. AdMob may use the Android Advertising ID (AAID), device model, OS version and coarse (country-level) location to personalize ads. More: policies.google.com/privacy.',
+          tr: 'Banner, geçiş (interstitial) ve ödüllü reklamlar AdMob aracılığıyla sunulur. AdMob; Android Reklam Kimliği (AAID), cihaz modeli, işletim sistemi sürümü ve yaklaşık konum (ülke düzeyi) bilgilerini kullanabilir; ayrıca reklam ölçümü ve dolandırıcılık tespiti için anonim tanımlayıcılar (cookie benzeri SDK işaretçileri) toplayabilir. Şu anda kişiselleştirilmiş reklam yapılmamaktadır (NPA — Non-Personalized Ads); bir reklam onayı (UMP) akışı eklendiğinde bu politika güncellenecektir. Daha fazlası: policies.google.com/privacy.',
+          en: 'Banner, interstitial and rewarded ads are served via AdMob. AdMob may use the Android Advertising ID (AAID), device model, OS version and approximate (country-level) location, and may collect anonymous identifiers (cookie-like SDK markers) for ad measurement and fraud prevention. Personalized ads are currently disabled (NPA — Non-Personalized Ads); this policy will be updated once a consent (UMP) flow is added. More: policies.google.com/privacy.',
         },
       },
       {
@@ -311,8 +306,15 @@ export const privacyApps: PrivacyApp[] = [
       {
         heading: { tr: 'Kişisel Bilgiler', en: 'Personal Information' },
         paragraph: {
-          tr: 'Bulmaca Ustası; isim, e-posta, telefon numarası veya benzeri kişisel bilgileri talep etmez ve toplamaz. Uygulama hesap oluşturmayı veya giriş yapmayı gerektirmez ve herhangi bir online özellik (lider tablosu, çevrimiçi profil, bulut kaydı vb.) içermez.',
-          en: 'Bulmaca Ustası does not request or collect names, emails, phone numbers or any similar personal information. The App does not require an account or sign-in and contains no online features (no leaderboards, online profiles or cloud save).',
+          tr: 'Bulmaca Ustası; isim, e-posta, telefon numarası veya benzeri kişisel bilgileri talep etmez ve toplamaz. Uygulama hesap oluşturmayı veya giriş yapmayı gerektirmez; hesap, lider tablosu, bulut kaydı veya kullanıcı tarafından oluşturulan içerik gibi çevrimiçi özellikler içermez. Yalnızca reklam yüklemek için Google sunucularıyla iletişim kurulur.',
+          en: 'Bulmaca Ustası does not request or collect names, emails, phone numbers or any similar personal information. The App does not require an account or sign-in and contains no online features such as accounts, leaderboards, cloud save or user-generated content. Network access is used only to load ads from Google servers.',
+        },
+      },
+      {
+        heading: { tr: 'Kişiselleştirilmiş Reklam ve Onay (GDPR)', en: 'Personalized Ads & Consent (GDPR)' },
+        paragraph: {
+          tr: 'Avrupa Ekonomik Alanı (AEA), Birleşik Krallık ve İsviçre\'deki kullanıcılara şu an kişiselleştirilmiş reklam gösterilmez (NPA modu). UMP (User Messaging Platform) veya benzeri bir reklam onayı akışı eklendiğinde, bu sayfa güncellenecek ve uygulama ilk açılışta açıkça izin isteyecektir.',
+          en: 'Users in the European Economic Area (EEA), United Kingdom and Switzerland are currently shown only non-personalized ads (NPA mode). Once a User Messaging Platform (UMP) consent flow or equivalent is integrated, this page will be updated and the App will explicitly request consent on first launch.',
         },
       },
       {
