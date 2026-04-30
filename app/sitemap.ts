@@ -1,17 +1,19 @@
-import { getBlogPosts } from 'app/blog/utils'
+import { privacyApps } from './lib/privacy'
 
-export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
+export const baseUrl = 'https://tumraytopaloglu.com'
 
 export default async function sitemap() {
-  let blogs = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }))
+  const lastModified = new Date().toISOString().split('T')[0]
 
-  let routes = ['', '/blog'].map((route) => ({
+  const staticRoutes = ['', '/about', '/privacy'].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
+    lastModified,
   }))
 
-  return [...routes, ...blogs]
+  const privacyRoutes = privacyApps.map((app) => ({
+    url: `${baseUrl}/privacy/${app.slug}`,
+    lastModified,
+  }))
+
+  return [...staticRoutes, ...privacyRoutes]
 }

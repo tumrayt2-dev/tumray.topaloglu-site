@@ -290,8 +290,8 @@ export const privacyApps: PrivacyApp[] = [
       {
         name: 'Google AdMob',
         body: {
-          tr: 'Banner, geçiş (interstitial) ve ödüllü reklamlar AdMob aracılığıyla sunulur. AdMob; Android Reklam Kimliği (AAID), cihaz modeli, işletim sistemi sürümü ve yaklaşık konum (ülke düzeyi) bilgilerini kullanabilir; ayrıca reklam ölçümü ve dolandırıcılık tespiti için anonim tanımlayıcılar (cookie benzeri SDK işaretçileri) toplayabilir. Şu anda kişiselleştirilmiş reklam yapılmamaktadır (NPA — Non-Personalized Ads); bir reklam onayı (UMP) akışı eklendiğinde bu politika güncellenecektir. Daha fazlası: policies.google.com/privacy.',
-          en: 'Banner, interstitial and rewarded ads are served via AdMob. AdMob may use the Android Advertising ID (AAID), device model, OS version and approximate (country-level) location, and may collect anonymous identifiers (cookie-like SDK markers) for ad measurement and fraud prevention. Personalized ads are currently disabled (NPA — Non-Personalized Ads); this policy will be updated once a consent (UMP) flow is added. More: policies.google.com/privacy.',
+          tr: 'Banner, geçiş (interstitial) ve ödüllü reklamlar AdMob aracılığıyla sunulur. AdMob; Android Reklam Kimliği (AAID), cihaz modeli, işletim sistemi sürümü ve yaklaşık konum (ülke düzeyi) bilgilerini kullanabilir; ayrıca reklam ölçümü ve dolandırıcılık tespiti için anonim tanımlayıcılar (cookie benzeri SDK işaretçileri) toplayabilir. Daha fazlası: policies.google.com/privacy.',
+          en: 'Banner, interstitial and rewarded ads are served via AdMob. AdMob may use the Android Advertising ID (AAID), device model, OS version and approximate (country-level) location, and may collect anonymous identifiers (cookie-like SDK markers) for ad measurement and fraud prevention. More: policies.google.com/privacy.',
         },
       },
       {
@@ -313,8 +313,8 @@ export const privacyApps: PrivacyApp[] = [
       {
         heading: { tr: 'Kişiselleştirilmiş Reklam ve Onay (GDPR)', en: 'Personalized Ads & Consent (GDPR)' },
         paragraph: {
-          tr: 'Avrupa Ekonomik Alanı (AEA), Birleşik Krallık ve İsviçre\'deki kullanıcılara şu an kişiselleştirilmiş reklam gösterilmez (NPA modu). UMP (User Messaging Platform) veya benzeri bir reklam onayı akışı eklendiğinde, bu sayfa güncellenecek ve uygulama ilk açılışta açıkça izin isteyecektir.',
-          en: 'Users in the European Economic Area (EEA), United Kingdom and Switzerland are currently shown only non-personalized ads (NPA mode). Once a User Messaging Platform (UMP) consent flow or equivalent is integrated, this page will be updated and the App will explicitly request consent on first launch.',
+          tr: 'Avrupa Ekonomik Alanı (AEA), Birleşik Krallık ve İsviçre\'deki kullanıcılara reklam gösterilmeden önce Google\'ın User Messaging Platform (UMP) onay akışı çalıştırılır. İlk açılışta gösterilen onay ekranından kişiselleştirilmiş reklamlara izin verebilir veya reddedebilirsiniz; reddedildiğinde yalnızca kişiselleştirilmemiş reklamlar (NPA) gösterilir. Tercihinizi daha sonra cihaz ayarlarından veya destekleyen sürümlerde uygulama ayarlarından sıfırlayabilirsiniz.',
+          en: 'Before any ads are served to users in the European Economic Area (EEA), United Kingdom or Switzerland, Google\'s User Messaging Platform (UMP) consent flow is run. On first launch you can grant or decline personalized ads from the consent dialog; if declined, only non-personalized ads (NPA) are shown. You can reset your choice later from device settings, or from in-app settings on supported builds.',
         },
       },
       {

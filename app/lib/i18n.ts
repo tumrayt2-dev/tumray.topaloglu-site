@@ -5,7 +5,6 @@ export type Translation = {
     home: string
     about: string
     projects: string
-    blog: string
     contact: string
   }
   hero: {
@@ -77,7 +76,6 @@ export const translations: Record<Lang, Translation> = {
       home: 'Ana Sayfa',
       about: 'Hakkımda',
       projects: 'Projeler',
-      blog: 'Blog',
       contact: 'İletişim',
     },
     hero: {
@@ -158,7 +156,6 @@ export const translations: Record<Lang, Translation> = {
       home: 'Home',
       about: 'About',
       projects: 'Projects',
-      blog: 'Blog',
       contact: 'Contact',
     },
     hero: {
