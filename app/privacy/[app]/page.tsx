@@ -56,7 +56,9 @@ export default function PrivacyAppPage({ params }: Props) {
           {t.privacy.effectiveDate}:
         </dt>
         <dd className="text-neutral-700 dark:text-neutral-300">
-          {app.effectiveDate}
+          {typeof app.effectiveDate === 'string'
+            ? app.effectiveDate
+            : app.effectiveDate[lang]}
         </dd>
       </dl>
 

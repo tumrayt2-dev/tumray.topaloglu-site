@@ -14,7 +14,7 @@ export type PrivacyApp = {
   slug: string
   name: string
   type: LocalizedString
-  effectiveDate: string
+  effectiveDate: string | LocalizedString
   contactEmail: string
   publisher: string
   intro: LocalizedString
@@ -259,6 +259,93 @@ export const privacyApps: PrivacyApp[] = [
     childrens: {
       tr: 'Emojice 13 yaş altı kullanıcılardan bilinçli olarak veri toplamaz. AdMob politikasına göre reklamlar yaşa uygun gösterilir.',
       en: 'Emojice does not knowingly collect data from users under 13. Ads are shown in accordance with AdMob age-appropriate policies.',
+    },
+  },
+
+  // Bulmaca Ustası
+  {
+    slug: 'bulmaca_ustasi',
+    name: 'Bulmaca Ustası',
+    type: { tr: 'Mobil Bulmaca (Android)', en: 'Mobile Puzzle (Android)' },
+    effectiveDate: {
+      tr: 'Geliştirme aşamasında',
+      en: 'In development',
+    },
+    contactEmail: COMMON_EMAIL,
+    publisher: PUBLISHER,
+    intro: {
+      tr: 'Bulmaca Ustası ("Uygulama"), bağımsız olarak geliştirilmiş bir bulmaca uygulamasıdır. Hesap oluşturmayı gerektirmez; tüm ilerleme ve ayarlar yalnızca cihazınızda saklanır. Bu politika; hangi verilerin toplandığını, nasıl kullanıldığını ve hangi üçüncü taraf hizmetlerin devrede olduğunu açıklar.',
+      en: 'Bulmaca Ustası ("the App") is an independently developed puzzle application. It does not require an account; all progress and settings are stored only on your device. This policy explains what data is collected, how it is used and which third-party services are involved.',
+    },
+    locallyStored: {
+      tr: [
+        'Tamamlanan bulmacalar ve elde edilen skorlar',
+        'Ayarlar (ses, tema, dil, ipucu sayısı)',
+        'İstatistikler (toplam çözülen bulmaca sayısı vb.)',
+        'Günlük meydan ilerlemesi',
+      ],
+      en: [
+        'Completed puzzles and scores',
+        'Settings (sound, theme, language, hint count)',
+        'Statistics (total puzzles solved, etc.)',
+        'Daily challenge progress',
+      ],
+    },
+    thirdParties: [
+      {
+        name: 'Google AdMob',
+        body: {
+          tr: 'Banner, geçiş (interstitial) ve ödüllü reklamlar AdMob aracılığıyla sunulur. AdMob, reklam kişiselleştirmesi için Android Reklam Kimliği (AAID), cihaz modeli, işletim sistemi sürümü ve kaba konum (ülke düzeyi) bilgilerini kullanabilir. Daha fazlası: policies.google.com/privacy.',
+          en: 'Banner, interstitial and rewarded ads are served via AdMob. AdMob may use the Android Advertising ID (AAID), device model, OS version and coarse (country-level) location to personalize ads. More: policies.google.com/privacy.',
+        },
+      },
+      {
+        name: 'Google Play Services',
+        body: {
+          tr: 'Uygulama dağıtımı ve temel platform hizmetleri için Google Play Services kullanılır.',
+          en: 'Google Play Services is used for app distribution and core platform services.',
+        },
+      },
+    ],
+    additionalSections: [
+      {
+        heading: { tr: 'Kişisel Bilgiler', en: 'Personal Information' },
+        paragraph: {
+          tr: 'Bulmaca Ustası; isim, e-posta, telefon numarası veya benzeri kişisel bilgileri talep etmez ve toplamaz. Uygulama hesap oluşturmayı veya giriş yapmayı gerektirmez ve herhangi bir online özellik (lider tablosu, çevrimiçi profil, bulut kaydı vb.) içermez.',
+          en: 'Bulmaca Ustası does not request or collect names, emails, phone numbers or any similar personal information. The App does not require an account or sign-in and contains no online features (no leaderboards, online profiles or cloud save).',
+        },
+      },
+      {
+        heading: { tr: 'Reklam Kimliği (AD_ID)', en: 'Advertising ID (AD_ID)' },
+        paragraph: {
+          tr: 'Uygulama, AdMob reklamları için Android Reklam Kimliği\'ni kullanır. Bu kimliği cihaz ayarlarınızdan sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz: Ayarlar → Google → Reklamlar.',
+          en: 'The App uses the Android Advertising ID for AdMob ads. You can reset this ID or opt out of personalized ads from device settings: Settings → Google → Ads.',
+        },
+      },
+      {
+        heading: {
+          tr: 'Veri Aktarımı ve Güvenlik',
+          en: 'Data Transmission and Security',
+        },
+        paragraph: {
+          tr: 'Tüm bulmaca ilerlemesi ve ayarlar yalnızca cihazınızda saklanır; tarafımızca yönetilen herhangi bir sunucuya aktarım yapılmaz. AdMob ile yapılan veri alışverişi HTTPS üzerinden şifreli olarak gerçekleşir.',
+          en: 'All puzzle progress and settings are stored only on your device; no data is transferred to any server we operate. Data exchange with AdMob is encrypted via HTTPS.',
+        },
+      },
+      {
+        heading: {
+          tr: 'Veri Silme',
+          en: 'Data Deletion',
+        },
+        paragraph: {
+          tr: 'Cihazda saklanan tüm verileri silmek için uygulamayı kaldırmanız yeterlidir. AdMob tarafında toplanan anonim verilerin silinmesi için Google\'ın ilgili politikaları geçerlidir; ek olarak bize e-posta ile talep iletebilirsiniz.',
+          en: 'To delete all locally stored data, simply uninstall the App. For anonymous data collected by AdMob, Google\'s relevant policies apply; you may also contact us via email.',
+        },
+      },
+    ],
+    childrens: {
+      tr: 'Bulmaca Ustası özellikle çocuklara yönelik bir uygulama değildir ve 13 yaş altı kullanıcılardan bilerek veri toplamaz. 13 yaşın altındaysanız uygulamayı kullanmadan önce ebeveyninizden izin alınız.',
+      en: 'Bulmaca Ustası is not specifically directed to children and does not knowingly collect data from users under 13. If you are under 13, please obtain parental consent before using the App.',
     },
   },
 
