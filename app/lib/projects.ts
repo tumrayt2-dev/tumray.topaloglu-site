@@ -73,6 +73,17 @@ export const featuredProjects: Project[] = [
     action: 'contactForAccess',
   },
   {
+    slug: 'builder-platform',
+    name: 'Builder Platform',
+    category: { tr: 'Web Platformu', en: 'Web Platform' },
+    description: {
+      tr: 'Müşteri sitelerini hazır blok setlerinden (header, hero, footer vb.) komponere ederek üreten çok kiracılı iç builder aracı. Tema, layout ve canlı önizleme sistemi.',
+      en: 'A multi-tenant internal builder that composes customer sites from reusable block sets (header, hero, footer, etc.), with theme, layout and live-preview tooling.',
+    },
+    status: 'development',
+    action: 'comingSoon',
+  },
+  {
     slug: 'workflow-saas',
     name: 'Workflow SaaS',
     category: { tr: 'Web SaaS', en: 'Web SaaS' },
