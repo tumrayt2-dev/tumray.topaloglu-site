@@ -51,6 +51,17 @@ export const featuredProjects: Project[] = [
     href: 'https://play.google.com/store/apps/details?id=com.tumray.taboo_rush',
   },
   {
+    slug: 'bulmaca-ustasi',
+    name: 'Bulmaca Ustası',
+    category: { tr: 'Mobil Bulmaca', en: 'Mobile Puzzle' },
+    description: {
+      tr: 'Sudoku, Nonogram, Atasözü ve Kelime Bulmaca türlerini tek uygulamada toplayan all-in-one bulmaca. Günlük meydan, istatistikler ve dark tema. Şu an Play Console kapalı test aşamasında.',
+      en: 'An all-in-one puzzle app combining Sudoku, Nonogram, Proverb and Word Search, with a daily challenge, stats and dark theme. Currently in Play Console closed testing.',
+    },
+    status: 'closedTest',
+    action: 'contactForAccess',
+  },
+  {
     slug: 'emojice',
     name: 'Emojice',
     category: { tr: 'Mobil Oyun', en: 'Mobile Game' },
